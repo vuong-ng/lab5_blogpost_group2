@@ -1,11 +1,13 @@
 # Lab 5: Build a sequential circuit
 
 ## Overview and Motivation
-In this lab, we will design circuits that utilize memory in order to achieve increased functionality. Before this lab, we created different combinational circuits in which the outputs of the circuits were determined by the inputs directly. This means we weren't required to worry about memory, nor any notion of the sequence of operations that may have happened in the past.
+In this lab, we will design circuits that remember the previous output in order to achieve increased functionality. These are called sequential circuits. Before this lab, we created different combinational circuits in which the outputs of the circuits were determined by the inputs directly. This means we weren't required to worry about memory, nor any notion of the sequence of operations that may have happened in previous moments before the current state.
 
-This week, we will be working with Sequential Circuits. Sequential circuits introduce the idea of different states and being able to remember things about the previous input. The outputs can now be a function of both, inputs and previous internal state of the sequential circuit. In this lab, we will build a circuit that reads a binary number bit by bit and determines if that input (entire number) is divisible by 3. Each bit of the binary number will be clocked into the circuit sequentially, from the highest order bit to the lowest (left to right). As we recieve each bit, we must interpret it as this will equal to a different number than previous input/s and update our circuit's state accordingly.
+This week, we will be working with Sequential Circuits. Sequential circuits introduce the idea of different states and being able to remember and use the outputs of the previous moment as one of the inputs for the current state. The outputs can now be a function of both, inputs and previous internal state of the sequential circuit. 
 
-To successfully be able to create this circuit, we need to make ourselves fimilar with Finite State Machine Design.
+The challenge for this lab is constructing a circuit that reads a binary number bit by bit and determines if that input (entire number) is divisible by 3. Each bit of the binary number will be clocked into the circuit sequentially, from the highest order bit to the lowest (left to right). As we recieve each bit, we must accumulate it into the binary array we have up until that moment and update our circuit's state accordingly.
+
+This lab requires you to be quite familiar with Finite State Machine Design. To successfully be able to construct this circuit, we'll need to complete multiple tasks. We will discover those in this lab so let's jump in! 
 
 ## Materials
 For this lab, we will need to consult IC data sheets for the NOT, AND, XOR, and the JK Flip-flop:
@@ -29,18 +31,23 @@ For this lab, we will need to consult IC data sheets for the NOT, AND, XOR, and 
 
 - 7476 JK Flip Flop IC
 
-- Resistors
+- 1 Resistor
 
 Once getting all things prepared, we can get to work!
 
 ## Project Steps
-In order to design a sequential circuits, we have to go thorugh 5 steps:
+In order to design a sequential circuits, we have to go through main 7 steps:
+
 * **Step 1:** Design a finite state machine (FSA)
 * **Step 2:** Construct a state table
 * **Step 3:** Use the FSM and state table to build a function table
 * **Step 4:** Read values from the function table into K-maps
 * **Step 5:** Use the K-maps to build for the next state and output blocks.
-#### Design a finite state machine (FSA) 
+* **Step 6:** Build the circuit in logisim and fully test the design. You want to uncover any errors at this point before
+you begin physical construction.
+* **Step 7:** Build the circuit on the breadboard.
+
+#### Design a Finite State Machine (FSA) 
 - For this task, we will draw a DFA for the task. We will draw a DFA that will accept the binary numbers that are divisible by 3. Notice that the 0 number will be accepted, we will have the first state as our accepting state. We know that number that is divisible by 3 is when the sum of the all digits in the number is divisible by 3. Writing out some examples of binary numbers that are/aren't divisible by 3, we can see that if the number has more than 1's or there are an even number of 0's between the 1's, the number is accepted. 
 
 - We have the transition table as follow:
