@@ -51,6 +51,7 @@ you begin physical construction.
 - For this task, we will draw a DFA for the task. We will draw a DFA that will accept the binary numbers that are divisible by 3. Notice that the 0 number will be accepted, we will have the first state as our accepting state. We know that number that is divisible by 3 is when the sum of the all digits in the number is divisible by 3. Writing out some examples of binary numbers that are/aren't divisible by 3, we can see that if the number has more than 1's or there are an even number of 0's between the 1's, the number is accepted. 
 
 - We have the transition table as follow:
+- 
 [Transition table](https://drive.google.com/file/d/13HbGzndM91nAsxtJWEFQTZ1iAskhfdT-/view)
 
 From the transition table, we can easily construct the DFA. 
@@ -59,6 +60,7 @@ From the transition table, we can easily construct the DFA.
 
 #### Construct a state table
 Now, let's set our state stable as follow (the output at each state table can be arbitrarily chosen):
+
 [State table](https://drive.google.com/file/d/1sZio_7WSW4t37cYnj2W7NabdL0Hb_9US/view)
 
 Now, based on the DFA we just construct, sketch out the truth table for our circuit. However, before drawing the truth table we should notice the the basic idea of how the JK flip-flop works according to our inputs and expected outputs. 
