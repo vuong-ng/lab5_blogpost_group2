@@ -47,7 +47,7 @@ In order to design a sequential circuits, we have to go through main 7 steps:
 you begin physical construction.
 * **Step 7:** Build the circuit on the breadboard.
 
-#### Design a Finite State Machine (FSA) 
+### 1. Design a Finite State Machine (FSA) 
 - For this task, we will draw a DFA for the task. We will draw a DFA that will accept the binary numbers that are divisible by 3. Notice that the 0 number will be accepted, we will have the first state as our accepting state. We know that number that is divisible by 3 is when the sum of the all digits in the number is divisible by 3. Writing out some examples of binary numbers that are/aren't divisible by 3, we can see that if the number has more than 1's or there are an even number of 0's between the 1's, the number is accepted. 
 
 - We have the transition table as follow:
@@ -63,9 +63,9 @@ Now, let's set our state stable as follow (the output at each state table can be
 
 Now, based on the DFA we just construct, sketch out the truth table for our circuit. However, before drawing the truth table we should notice the the basic idea of how the JK flip-flop works according to our inputs and expected outputs. 
 
-<!-- Insert the J-K table according to inputs -->
+[J-K input table](https://drive.google.com/file/d/1h7cKYnVSzQUT1-621IHJomugLkQs4_Rf/view)
 
-#### Use the FSM and state table to build a function table
+#### 2. Use the FSM and state table to build a function table
 Now, we are ready to draw our truth table.
 
 [Truth table](https://drive.google.com/file/d/1MBYbH9pDKPhsy4Z7Dk1nSxiK1QTjULVc/view)
